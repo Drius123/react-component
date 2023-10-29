@@ -1,0 +1,16 @@
+@use '../../styles/constants.module.scss' as constants;
+@use '../../styles/functions.module.scss' as functions;
+@use '../../styles/mixin.module.scss' as mixin;
+
+.name {
+  @include mixin.font($size: 20, $height: 120%, $weight: 400);
+  @include mixin.adaptiveClamp($property: font-size, $startSize: 20, $minSize: 8);
+  color: constants.$bgColor;
+}
+
+.height,
+.mass {
+  @include mixin.font($size: 18, $height: 120%, $weight: 400);
+  @include mixin.adaptiveClamp($property: font-size, $startSize: 18, $minSize: 6);
+  color: constants.$bgColor;
+}

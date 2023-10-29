@@ -1,0 +1,18 @@
+@use '../../styles/constants.module.scss' as constants;
+@use '../../styles/functions.module.scss' as functions;
+@use '../../styles/mixin.module.scss' as mixin;
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: functions.rem(100);
+  .header-content {
+    display: flex;
+    justify-content: center;
+    padding-top: functions.rem(10);
+  }
+  .bottom-content {
+  }
+}

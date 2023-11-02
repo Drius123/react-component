@@ -1,7 +1,8 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export interface SearchInputProps {
-  request: (request: string) => Promise<void>;
-  changeState: () => void;
-  changeLoading: () => void;
+  changeState: Dispatch<SetStateAction<Results>>;
+  changeLoading: Dispatch<SetStateAction<boolean>>;
 }
 
 export default interface CardProps {
@@ -13,3 +14,5 @@ export default interface CardProps {
 export interface PresentationProps {
   items: CardProps[] | [];
 }
+
+export type Results = CardProps[];

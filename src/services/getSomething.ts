@@ -4,18 +4,18 @@ export async function getItem(request: string) {
   try {
     const response = await fetch(`${BASE_URL}/?search=${request}`);
     const data = await response.json();
-    return data;
+    return data.results;
   } catch (e) {
     console.log(e);
     return {};
   }
 }
 
-export async function getPeople() {
+export async function getPeopleByPage(page: number) {
   try {
-    const response = await fetch(BASE_URL);
+    const response = await fetch(`${BASE_URL}/?page=${page}`);
     const data = await response.json();
-    return data;
+    return data.results;
   } catch (e) {
     console.log(e);
     return {};

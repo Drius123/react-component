@@ -3,6 +3,12 @@
 @use '../../styles/mixin.module.scss' as mixin;
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: functions.rem(5);
+  border: functions.rem(1) solid black;
+  border-radius: functions.rem(50);
   .name {
     @include mixin.font($size: 20, $height: 120%, $weight: 400);
     @include mixin.adaptiveClamp($property: font-size, $startSize: 20, $minSize: 8);

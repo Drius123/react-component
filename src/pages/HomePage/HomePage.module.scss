@@ -10,8 +10,20 @@
   row-gap: functions.rem(100);
   .header-content {
     display: flex;
+    flex-direction: column;
+    row-gap: functions.rem(20);
     justify-content: center;
+    align-items: center;
     padding-top: functions.rem(10);
+    .btn {
+      border: functions.rem(1) solid black;
+      border-radius: functions.rem(20);
+      width: functions.rem(100);
+      height: functions.rem(50);
+      @include mixin.font($size: 15, $height: 120%, $weight: 400);
+      @include mixin.adaptiveClamp($property: font-size, $startSize: 15, $minSize: 10);
+      color: constants.$bgColor;
+    }
   }
   .bottom-content {
   }

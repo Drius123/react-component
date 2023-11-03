@@ -11,8 +11,11 @@ export default function App() {
       <Routes>
         <Route path="*" element={<NotFoundPage />} />
         <Route path={routeNames.PATH} element={<AppLayout />}>
-          <Route path={routeNames.PATH} element={<Navigate to={routeNames.HOME} />} />
-          <Route path={routeNames.HOME} element={<HomePage />} />
+          <Route
+            path={routeNames.PATH}
+            element={<Navigate to={`${routeNames.HOME}${routeNames.PAGE}/:pageNumber`} />}
+          />
+          <Route path={`${routeNames.HOME}${routeNames.PAGE}/:pageNumber`} element={<HomePage />} />
         </Route>
       </Routes>
     </div>

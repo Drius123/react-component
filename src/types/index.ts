@@ -16,3 +16,7 @@ export interface PresentationProps {
 }
 
 export type Results = CardProps[];
+
+export interface SelectorProps {
+  pageNumber: number;
+}

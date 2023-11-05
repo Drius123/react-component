@@ -13,7 +13,7 @@ export default function App() {
         <Route path={routeNames.PATH} element={<AppLayout />}>
           <Route
             path={routeNames.PATH}
-            element={<Navigate to={`${routeNames.HOME}${routeNames.PAGE}/:pageNumber`} />}
+            element={<Navigate to={`${routeNames.HOME}${routeNames.PAGE}/1`} />}
           />
           <Route path={`${routeNames.HOME}${routeNames.PAGE}/:pageNumber`} element={<HomePage />} />
         </Route>

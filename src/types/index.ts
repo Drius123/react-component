@@ -20,3 +20,6 @@ export type Results = CardProps[];
 export interface SelectorProps {
   pageNumber: number;
 }
+export interface ChangerProps {
+  setItems: Dispatch<SetStateAction<number>>;
+}

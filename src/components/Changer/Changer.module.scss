@@ -1,0 +1,36 @@
+@use '../../styles/constants.module.scss' as constants;
+@use '../../styles/functions.module.scss' as functions;
+@use '../../styles/mixin.module.scss' as mixin;
+
+.changer {
+  .text {
+    @include mixin.font($size: 20, $height: 120%, $weight: 400);
+    @include mixin.adaptiveClamp($property: font-size, $startSize: 20, $minSize: 10);
+    color: constants.$bgColor;
+  }
+  .input {
+    background-color: constants.$bgColor;
+    @include mixin.adaptiveClamp($property: width, $startSize: 150, $minSize: 75);
+    @include mixin.adaptiveClamp($property: height, $startSize: 30, $minSize: 40);
+    width: 100%;
+    @include mixin.font($size: 14, $height: 120%, $weight: 400);
+    @include mixin.adaptiveClamp($property: font-size, $startSize: 30, $minSize: 14);
+    color: constants.$colorTundora;
+  }
+  .input:invalid {
+    border: functions.rem(2) dashed red;
+  }
+  .btn {
+    position: relative;
+    bottom: functions.rem(10);
+    margin-left: functions.rem(10);
+    width: functions.rem(50);
+    height: functions.rem(50);
+    border: functions.rem(1) solid white;
+    @include mixin.font($size: 10, $height: 120%, $weight: 400);
+    color: wheat;
+  }
+  .btn:hover {
+    opacity: 90%;
+  }
+}

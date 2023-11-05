@@ -1,0 +1,29 @@
+@use '../../styles/constants.module.scss' as constants;
+@use '../../styles/functions.module.scss' as functions;
+@use '../../styles/mixin.module.scss' as mixin;
+
+.selector {
+  display: flex;
+  align-items: center;
+  column-gap: functions.rem(20);
+  padding-top: functions.rem(20);
+  .counter {
+    @include mixin.font($size: 25, $height: 120%, $weight: 400);
+    @include mixin.adaptiveClamp($property: font-size, $startSize: 25, $minSize: 10);
+    color: constants.$bgColor;
+    border: functions.rem(1) solid white;
+    border-radius: functions.rem(30);
+    width: functions.rem(30);
+    height: functions.rem(30);
+    text-align: center;
+  }
+  .btn {
+    border: functions.rem(1) solid white;
+    border-radius: functions.rem(20);
+    width: functions.rem(100);
+    height: functions.rem(50);
+    @include mixin.font($size: 15, $height: 120%, $weight: 400);
+    @include mixin.adaptiveClamp($property: font-size, $startSize: 15, $minSize: 10);
+    color: constants.$bgColor;
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../styles/constants.module.scss' as constants;
+@use '../../styles/functions.module.scss' as functions;
+@use '../../styles/mixin.module.scss' as mixin;
+
+.presentation-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: functions.rem(10);
+}
